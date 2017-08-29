@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>Gerador de Título de E-mail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  Styles  -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <link rel="stylesheet" href="styles/index.processed.css">
+  <link rel="stylesheet" href="styles/sweetalert.css">
+  </head>
+<body onload="random()">
+  <div class="main-container" id="main-container">
+    <!-- <nav class="nav">
+      <div class="nav__container">
+        <a href="#" class="nav__logo">title generator</a>
+        <p class="nav__description">
+          create by
+          <a class="nav__link" href="https://twitter.com/omatheuscg" target="_blank">@omatheuscg</a>
+        </p>
+      </div>
+    </nav> -->
+    <section class="section">
+      <div class="screen screen--slide-right screen--active screen--initial" id="landing">
+        <div class="landing__heading">
+          <h1>.generate</h1>
+          <h3>gerador de título de e-mail eficiente</h3>
+        </div>
+        <form class="form" autocomplete="off" id="form" onsubmit="return false">
+          <div class="field" id="field">
+            <input type="text" class="field__input" id="input" placeholder="Informe a palavra chave" />
+            <button class="field__submit" id="button">
+              <span class="ion-arrow-right-c" onclick="teste()"></span>
+            </button>
+          </div>
+        </form>
+        <p id="escreve"></p>
+        <button class="round-button round-button--spin ion-android-refresh" id="refresh" onclick="teste()"></button>
+        <!-- <p class="field__info">feito com 💛 em Belo Horizonte</p -->
+      </div>
+      <!-- Scripts -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+      <script src="scripts/script.js"></script>
+      <script src="scripts/sweetalert.min.js"></script>
+
+</body>
+    </html>

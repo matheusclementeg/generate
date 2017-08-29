@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:300,400,600,700");
+.round-button {
+  opacity: 0.5;
+  margin-left: 0rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  color: #000000;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.round-button:hover {
+  opacity: 0.7;
+}
+
+.round-button:focus,
+.round-button:active {
+  opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  /* for input */
+  -webkit-user-select: none;
+  /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+/* Make `a` like a button */
+
+[role="button"] {
+  color: inherit;
+  cursor: default;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: pre;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+button,
+a {
+  cursor: pointer;
+  font-family: "Open Sans", Helvetica, serif;
+}
+
+button:focus,
+button:active,
+a:focus,
+a:active {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Bitter", Helvetica, serif;
+  -webkit-font-smoothing: antialiased;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+@media (min-width: 500px) {
+  html,
+  body {
+    font-size: 17px;
+  }
+}
+
+.main-container {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container.blur:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5643af;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+h1 {
+  margin: 0 0 0.2em;
+  font-size: 2.1rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 500px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 500px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  margin: 0 0 0.3em;
+  font-weight: 400;
+}
+
+.round-button {
+  font-size: 1.3rem;
+}
+
+.round-button--spin.active {
+  animation: spin 0.4s cubic-bezier(0.72, -0.07, 0.59, 1.08);
+}
+
+.nav {
+  padding: 1rem;
+  border-bottom: 0;
+  background: #21B799;
+  color: #ffffff;
+}
+
+@media (min-width: 500px) {
+  .nav {
+    padding: 1.5rem 4vw;
+  }
+}
+
+.nav__item {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.nav__logo {
+  text-transform: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: "Bitter", Helvetica, serif;
+  /* text-shadow: 1px 1px 2px #5131d8; */
+}
+
+.nav__container {
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width: 500px) {
+  .nav__container {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+.nav__description {
+  margin: 0.5em 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.nav__link {
+  border-bottom: 1px solid currentColor;
+  font-family: inherit;
+}
+
+.landing__heading {
+  margin: 0 0 2.5rem 0;
+  text-align: center;
+}
+
+/* .section {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex: 1;
+  flex: 1;
+  background: #444;
+} */
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #21b799;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/60485/bg.svg");
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  animation: shrink 0.6s ease-in-out;
+}
+
+.screen--active {
+  z-index: 10;
+  visibility: visible;
+}
+
+.screen--active.screen--slide-right {
+  animation: moveRight 0.6s ease-in-out;
+}
+
+.screen--active.screen--slide-left {
+  animation: moveLeft 0.6s ease-in-out;
+}
+
+.screen--active.screen--initial {
+  animation: none;
+}
+
+.form {
+  margin-bottom: 12vh;
+  width: 90%;
+  max-width: 600px;
+}
+
+@media (min-width: 500px) {
+  .form {
+    width: 40vw;
+    min-width: 460px;
+  }
+}
+
+.field {
+  --fieldHeight: 3.5rem;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  height: var(--fieldHeight);
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  font-family: "Open Sans", Helvetica, serif;
+}
+
+.field__info {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.field__input {
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 0 1em;
+  line-height: var(--fieldHeight);
+  font-size: 0.8rem;
+  color: #ffffff;
+  font-family: "Open Sans", Helvetica, serif;
+}
+
+@media (min-width: 500px) {
+  .field__input {
+    font-size: 1.15rem;
+  }
+}
+
+.field__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.field__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.field__input::placeholder {
+  color: #f4fafc;
+}
+
+.field__input:focus,
+.field__input:active {
+  outline: none;
+}
+
+.field__input:focus~.field__submit span,
+.field__input:active~.field__submit span {
+  top: 0;
+}
+
+.field__submit {
+  padding: 0 1em;
+  line-height: var(--fieldHeight);
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 500px) {
+  .field__submit {
+    font-size: 2rem;
+  }
+}
+
+.field__submit:focus span,
+.field__submit:active span {
+  top: 0;
+}
+
+.field__submit span {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  top: -3rem;
+}
