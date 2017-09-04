@@ -1,0 +1,401 @@
+html,
+body {
+  font-family: arial, sans-serif;
+  min-width: 720px;
+  background-color: #21b799;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/60485/bg.svg");
+  /*overflow: hidden;*/
+}
+
+.checkbox,
+.star,
+.senderName,
+.subjectLineAndPreHeader {
+  float: left;
+  display: block;
+  position: relative;
+}
+
+.row {
+  max-width: 1500px;
+}
+
+#container {
+  margin-top: 40px;
+}
+
+.gmailRow {
+  background: rgba(243, 243, 243, .85);
+  padding: 6px 0px 6px 0px;
+}
+
+.gmailTable {
+  border-top: 1px #e5e5e5 solid;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 1px #e5e5e5 solid;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.checkbox {
+  padding-left: 20px!important;
+  padding-right: 10px!important;
+  padding-top: 4px;
+  vertical-align: top;
+  width: 45px;
+}
+
+.checkbox div {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, .75);
+  border: 1px solid #c6c6c6;
+  border: 1px solid rgba(155, 155, 155, .57);
+  font-size: 1px;
+  height: 15px;
+  margin: 0 auto;
+  outline: 0;
+  vertical-align: text-bottom;
+  width: 15px;
+}
+
+.star img {
+  max-width: 20px;
+  min-width: 20px;
+  margin-bottom: 3px;
+}
+
+.star {
+  width: 25px;
+}
+
+.senderName {
+  padding-right: 6px!important;
+  padding-left: 4px!important;
+  width: 200px;
+  font-weight: bold;
+}
+
+.subjectLineAndPreHeader {
+  overflow: visible;
+  width: 100%;
+  max-width: 70%;
+  vertical-align: top;
+}
+
+.subjectLineAndPreHeader div {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.SL {
+  font-weight: bold;
+  max-width:550px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.pre {
+  color: #777;
+}
+
+.time {
+  font-weight: bold;
+  padding-right: 20px!important;
+  padding-left: 0px!important;
+  text-align: right;
+  position: absolute;
+  background: #D4EAE6;
+  width: 120px;
+  right: 15px;
+}
+#voltar{
+  color: #ffffff;
+  font-family: "Bitter", Helvetica, serif;
+  font-size: 30px;
+  margin-left: 1%;
+}
+
+.time div {}
+
+.clear {
+  clear: both;
+}
+
+.space {
+  margin-top: 20px;
+  border-top: 1px solid #ebebeb;
+}
+
+.ios {
+  position: relative;
+  background-color: #f9f9f9;
+  width: 320px;
+  height: 620px;
+  margin: 0 auto;
+  margin-top: 0% !important;
+  border-radius: 24px;
+  border: 1.6px solid #dddddd;
+  box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.1);
+}
+
+.ios .screen {
+  padding: 20% 5%;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  top: 0;
+}
+
+.ios .screen:before {
+  content: "";
+  background-color: #fffffe;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 2px solid #000;
+}
+
+.ios .speaker {
+  position: relative;
+  width: 15%;
+  margin: 10% auto 7% auto;
+  height: 4px;
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.ios .speaker:before {
+  content: "";
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  left: -15px;
+  top: -2px;
+  background-color: #777;
+}
+
+.ios button {
+  position: absolute;
+  left: 50%;
+  bottom: 2.6%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2.4px solid #dddddd;
+  margin-left: -17.5px;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+input[type=checkbox]:checked ~ .ios {
+  width: 765px;
+  height: 1024px;
+  border-width: 3px;
+}
+
+input[type=checkbox]:checked ~ .ios .screen {
+  padding: 9% 5%;
+}
+
+input[type=checkbox]:checked ~ .ios .speaker {
+  width: 0%;
+  margin: 4.2% auto 7% auto;
+}
+
+input[type=checkbox]:checked ~ .ios .speaker:before {
+  left: 1px;
+}
+
+input[type=checkbox],
+input[type=checkbox]:active {
+  position: absolute;
+  top: -5000px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  border: none;
+  outline: none;
+}
+
+
+input[type=checkbox]:checked + label:before {
+  left: calc(50%);
+}
+
+input[type=checkbox]:checked + label:after {
+  content: attr(data-on);
+  left: 70px;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  margin-left: 40px;
+}
+.navigationController {
+  width:98.7%;
+  background-color:#f2f2f2;
+  height:40px;
+  position:relative;
+  top:-488px;
+  left:2px;
+  padding-top:7px;
+}
+.back {
+  font-family:'Helvetica Neue';
+  font-weight:300;
+  color:#007AFF;
+}
+.back div{
+  display:block;
+  position:absolute;
+  left:5px;
+  top:-26px;
+  font-size:55px;
+  font-weight:100;
+}
+.title {
+  font-family:'Helvetica Neue';
+  font-weight:400;
+  color:#4A4A4A;
+  position:absolute;
+  left:44%;
+  top:16%;
+}
+.edit {
+  font-family:'Helvetica Neue';
+  font-weight:300;
+  color:#007AFF;
+  position:absolute;
+  right:7px;
+  top:16%;
+}
+.searchBar{
+  width:98.7%;
+  background-color:#C7C7CC;
+  height:40px;
+  position:relative;
+  top:-488px;
+  left:2px;
+  padding-top:7px;
+}
+.searchBar div {
+  width:96%;
+  margin:0 auto;
+  background:#fff;
+  border-radius:5px;
+  padding:4px;
+  font-size:12px;
+  text-align:center;
+  color:#c7c7c7;
+  font-family:'Helvetica Neue';
+  font-weight:300;
+  
+}
+.tableRow{
+  width:92.5%;
+  border-bottom:1px solid #c7c7c7;
+  height:60px;
+  position:relative;
+  top:-468px;
+  left:20px;
+  padding-top:7px;
+}
+.newEmailIcon {
+  background:#007AFF;
+  width:10px;
+  height:10px;
+  border-radius:100%;
+  position:absolute;
+  left:-14px;
+  top:-10px;
+}
+.sender {
+  position:absolute;
+  left:0px;
+  top:-16px;
+  font-weight:500;
+  font-size:14px;
+  font-family:'Helvetica Neue';
+}
+.timeiPhone {
+  position:absolute;
+  right:10px;
+  top:-12px;
+  font-weight:300;
+  font-size:11px;
+  color:#c7c7c7;
+  font-family:'Helvetica Neue';
+}
+.titleiPhone {
+  position:absolute;
+  left:1px;
+  top:3px;
+  font-weight:300;
+  width:255px;
+  font-size:13.2px;
+  font-family:'Helvetica Neue';
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.preheader {
+  position:absolute;
+  overflow:hidden;
+  right:7px;
+  top:21px;
+  font-weight:300;
+  font-size:11px;
+  color:#c7c7c7;
+  font-family:'Helvetica Neue';
+  width:255px;
+  height:32px;
+}
+.good {
+  background:#2ecc71;
+  padding:4px 10px;
+  color:#fffffe;
+  border-radius:3px;
+}
+.warning {
+  background:#f39c12;
+  padding:4px 10px;
+  color:#fffffe;
+  border-radius:3px;
+}
+.bad {
+  background:#e74c3c;
+  padding:4px 10px;
+  color:#fffffe;
+  border-radius:3px;
+}
+@media only screen and (max-width:1100px) {
+  .subjectLineAndPreHeader {
+    width:61%;
+  }
+}
+@media only screen and (max-width:725px) {
+  .subjectLineAndPreHeader {
+    width:60%;
+  }
+}
+.litmusLogo {
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  z-index;1000;
+}
+.litmusLogo img {
+  width:125px;
+}
