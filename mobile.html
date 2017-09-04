@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Generate | Mobile Friendly</title>
+  
+  
+  <link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/foundation/5.5.0/css/foundation.css'>
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300'>
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+
+
+      <link rel="stylesheet" href="styles/style.css">
+
+  
+</head>
+
+<body>
+ <a class="ion-arrow-left-c" href="index.html" id="voltar"></a>
+  <body ng-app="CopyDemo" ng-controller="formInput">
+  <div class="row" id="container">
+    <div class="small-12 columns">
+      <form name="demo">
+        <div class="row">
+          <div class="small-6 columns">
+            <label>
+
+              <b>Remetente</b>
+              <input ng-model="input.brand" type="text" />
+            </label>
+            <label>
+              <b>Assunto:</b> <span ng-class="{'good':input.subjectLine.length <= 40, 'warning':input.subjectLine.length > 40, 'bad':input.subjectLine.length > 60 }">{{ input.subjectLine.length}}</span>
+              <input ng-model="input.subjectLine" type="text" />
+            </label>
+            <label>
+              <b>Preview Text:</b> <span ng-class="{'good':input.preheader.length <= 50, 'warning':input.preheader.length > 50, 'bad':input.preheader.length > 80 }"> {{ input.preheader.length}}</span>
+              <input ng-model="input.preheader" type="text" />
+            </label>
+          </div>
+          <div class="small-6 columns">
+            <label>
+              <b>Texto</b>
+              <textarea rows="10" ng-model="input.followupText"></textarea>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="gmailTable">
+        <div class="gmailRow">
+          <div class="checkbox">
+            <div></div>
+          </div>
+          <div class="star">
+            <img src="https://ssl.gstatic.com/ui/v1/star/star4.png" />
+          </div>
+          <div class="senderName">{{input.brand}}</div>
+          <div class="subjectLineAndPreHeader">
+            <div>
+              <span class="SL">{{input.subjectLine}}</span>
+              <span class="pre">- {{input.preheader}} {{input.followupText}}</span>
+            </div>
+          </div>
+          <div class="time">
+            <div><script type="text/javascript">
+                  var hora = new Date();
+                        document.write(hora.getHours()+":"+hora.getMinutes());
+</script></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row space">
+    <div class="small-12 columns">
+      <input type="checkbox" name="checkbox" id="checkbox" />
+      <label class="iPhoneCheckbox" for="checkbox" data-off="iPhone" data-on="iPad"></label>
+      <div class="iphone ios" style="margin-top:20px;">
+        <div class="speaker"></div>
+        <div class="screen">
+          <div class="navigationController">
+            <div class="back">
+              <div>‹</div>&nbsp;&nbsp;&nbsp;&nbsp;Caixas</div>
+            <div class="title">Entrada</div>
+            <div class="edit">Editar</div>
+          </div>
+          <div class="searchBar">
+            <div>Busca</div>
+          </div>
+          <div class="tableRow">
+            <div class="newEmailIcon"></div>
+            <div class="sender">{{input.brand}}</div>
+            <div class="timeiPhone"><script type="text/javascript">
+                  var hora = new Date();
+                        document.write(hora.getHours()+":"+hora.getMinutes());
+</script></div>
+            <div class="titleiPhone">{{input.subjectLine}}</div>
+            <div class="preheader" data-ng-bind="input.preheader+ ' ' + input.followupText" data-ellipsis>
+              <span>
+                {{input.preheader}} {{input.followupText}}
+              </span>
+            </div>
+          </div>
+        </div>
+        <button></button>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script src='https://rawgit.com/dibari/angular-ellipsis/master/src/angular-ellipsis.min.js'></script>
+
+    <script src="scripts/index.js"></script>
+
+</body>
+</html>
